@@ -16,7 +16,7 @@ t_final = 10	# tiempo en segundos
 t = np.linspace(0, t_final, T)
 
 # Inicialización del proceso aleatorio W(t) con N realizaciones
-N = 10
+N = 100
 W_t = np.empty((N, len(t)))	# N funciones del tiempo w(t) con T puntos
 
 # Creación de las muestras del proceso w(t) (X y Y independientes)
@@ -58,7 +58,7 @@ for n in range(N):
 	plt.plot(taus, corr[n,:])
 
 # Valor teórico de correlación
-Rxx = 19/2 * np.cos(np.pi*taus)
+Rxx = 10 * np.cos(np.pi*taus)
 
 # Gráficas de correlación para cada realización y la
 plt.plot(taus, Rxx, '-.', lw=4, label='Correlación teórica')
